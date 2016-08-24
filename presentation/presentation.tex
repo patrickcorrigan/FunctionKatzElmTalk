@@ -84,6 +84,7 @@
 \usepackage{tikz}
 \usetikzlibrary{positioning}
 \usepackage{listings}
+\usepackage{url}
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 \makeatletter
 \patchcmd{\beamer@sectionintoc}
@@ -165,7 +166,11 @@ Musica \\ % Your institution for the title page
 \frametitle{First things first}
 
 \begin{center}
-     \Huge npm install -g elm
+     \Huge npm install -g elm \\
+     \vspace{1cm}
+     \Huge git clone \\
+     \vspace{0.5cm}
+     \Large \url{https://github.com/patrickcorrigan/FunctionKatzElmTalk.git}
 \end{center}
 
 \end{frame}
@@ -196,6 +201,9 @@ Musica \\ % Your institution for the title page
 
 Your terrible boss has asked you to add a reset button.
 He says it's going to make the company millions.
+\\
+\vspace{1cm}
+Modify the code in examples/counter
 
 \end{frame}
 
@@ -213,17 +221,10 @@ He says it's going to make the company millions.
 
 \frametitle{Now it's your turn 2}
 Your underpaying boss has asked you to convert it a palindrome checker.
+\\
+\vspace{1cm}
+Modify the code in examples/reverse
 \end{frame}
-\begin{frame}
-
-\frametitle{Text input example}
-
-\begin{center}
-     \Huge Text reverser
-\end{center}
-
-\end{frame}
-
 \begin{frame}
 
 \frametitle{Friend List Example}
@@ -237,8 +238,11 @@ Your underpaying boss has asked you to convert it a palindrome checker.
 \begin{frame}
 
 \frametitle{Now it's your turn 3}
-    Feature request for you friend list.
+    Feature request for you friends list.
     When clicking on a person it should reveal their disposition.
+    \\
+    \vspace{1cm}
+Modify the code in examples/friends-list
 \end{frame}
 
 
@@ -263,6 +267,7 @@ Your underpaying boss has asked you to convert it a palindrome checker.
 
 
 \begin{frame}
+\frametitle{Thank you}
 
     \begin{center}
          \Huge Thank you
