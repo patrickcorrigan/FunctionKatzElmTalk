@@ -1,4 +1,4 @@
-import Html exposing (Html, Attribute, div, input, text)
+import Html exposing (Html, Attribute, div, input, text, p)
 import Html.App as Html
 import Html.Attributes exposing (..)
 import Html.Events exposing (onInput)
@@ -14,11 +14,11 @@ main =
 -- MODEL
 
 type alias Model =
-  { content : String, isPalindrome : Maybe Bool}
+  { content : String }
 
 model : Model
 model =
-  { content = "", isPalindrome = Nothing}
+  { content = "" }
 
 
 -- UPDATE
@@ -30,20 +30,20 @@ update : Msg -> Model -> Model
 update msg model =
   case msg of
     Change newContent ->
-      { model | isPalindrome = Just (isPalindrome newContent) }
+      { model | content = newContent }
 
 -- VIEW
 
+palindromeInput = input [ placeholder "Is palindrome?", onInput Change ] []
+
 view : Model -> Html Msg
 view model =
- case model.isPalindrome of 
- Nothing -> 
-  div []
-    [ input [ placeholder "Text to reverse", onInput Change ] []
-    ]
+    if model.content /= "" then
+        div [] [ 
+            palindromeInput,
+            p [] [ text ( toString ( isPalindrome model.content ) ) ]
+        ]
+    else 
+        div []
+        [ palindromeInput ]
 
- Just isPalindrome -> 
-  div []
-    [ input [ placeholder "Text to reverse", onInput Change ] []
-    , div [] [ text (toString isPalindrome) ]
-    ]

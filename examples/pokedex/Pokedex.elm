@@ -1,5 +1,5 @@
 import Html exposing (..)
-import Html.App as App
+import Html.App as Html
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Http
@@ -9,7 +9,7 @@ import Task
 
 
 main =
-  App.program
+  Html.program
     { init = init
     , view = view
     , update = update
@@ -49,11 +49,11 @@ update msg model =
     Refresh ->
       (model, getPokemon)
 
-    FetchSucceed count ->
-      (Model count, Cmd.none)
+    FetchSucceed pokemon ->
+      (Model pokemon, Cmd.none)
 
     FetchFail _ ->
-      ({ model | pokemon = ["fail"] }, Cmd.none)
+      (Model ["failed"], Cmd.none)
       
 
 toLi pokemonName = li [] [text pokemonName]
@@ -89,11 +89,11 @@ getPokemon =
     url =
       "http://pokeapi.co/api/v2/pokemon"
   in
-    Task.perform FetchFail FetchSucceed (Http.get decodeGifUrl url)
+    Task.perform FetchFail FetchSucceed (Http.get decodePokemonJson url)
 
 pokemonNameDecoder : Decoder String
 pokemonNameDecoder =
   object1 identity ("name" := string)
 
-decodeGifUrl =
+decodePokemonJson =
   Json.at ["results"] (Json.list pokemonNameDecoder)

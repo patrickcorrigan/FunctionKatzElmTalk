@@ -10,14 +10,14 @@ main =
 
 -- MODEL
 
-type alias Model = { people : List Person}
+type alias Model = { people : List Person }
 
-type alias Person = {name: String, disposition: Disposition }
+type alias Person = { name: String, disposition: Disposition }
 
 type Disposition = EasyGoing | Angry | Bitter
 
 model : Model
-model = { people = [{name="Julien", disposition=Angry}, {name="Katie", disposition=Bitter} ] }
+model = { people = [ {name="Julien", disposition=EasyGoing}, {name="Katie", disposition=EasyGoing} ] }
 
 
 -- UPDATE

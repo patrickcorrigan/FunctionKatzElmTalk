@@ -2,7 +2,7 @@ var _user$project$Main$pokemonNameDecoder = A2(
 	_elm_lang$core$Json_Decode$object1,
 	_elm_lang$core$Basics$identity,
 	A2(_elm_lang$core$Json_Decode_ops[':='], 'name', _elm_lang$core$Json_Decode$string));
-var _user$project$Main$decodeGifUrl = A2(
+var _user$project$Main$decodePokemonJson = A2(
 	_elm_lang$core$Json_Decode$at,
 	_elm_lang$core$Native_List.fromArray(
 		['results']),
@@ -35,7 +35,7 @@ var _user$project$Main$getPokemon = function () {
 		_elm_lang$core$Task$perform,
 		_user$project$Main$FetchFail,
 		_user$project$Main$FetchSucceed,
-		A2(_evancz$elm_http$Http$get, _user$project$Main$decodeGifUrl, url));
+		A2(_evancz$elm_http$Http$get, _user$project$Main$decodePokemonJson, url));
 }();
 var _user$project$Main$init = {
 	ctor: '_Tuple2',
@@ -59,12 +59,9 @@ var _user$project$Main$update = F2(
 			default:
 				return {
 					ctor: '_Tuple2',
-					_0: _elm_lang$core$Native_Utils.update(
-						model,
-						{
-							pokemon: _elm_lang$core$Native_List.fromArray(
-								['fail'])
-						}),
+					_0: _user$project$Main$Model(
+						_elm_lang$core$Native_List.fromArray(
+							['failed'])),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
 		}

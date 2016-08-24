@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.19)  24 AUG 2016 16:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.19)  24 AUG 2016 17:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1138,6 +1138,10 @@ thkerncmss.
 
 ] [16
 
+] [17
+
+] [18
+
 ]
 \tf@nav=\write6
 \openout6 = `presentation.nav'.
@@ -1148,11 +1152,11 @@ thkerncmss.
 \tf@snm=\write8
 \openout8 = `presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 281.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 281.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 302.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 302.
  (./presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 281.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 281.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 302.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 302.
 Package rerunfilecheck Info: File `presentation.out' has not changed.
 (rerunfilecheck)             Checksum: 32A63EE6000C0DA709CC82AB19774E77;149.
 
@@ -1160,13 +1164,13 @@ Package rerunfilecheck Info: File `presentation.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 281.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 302.
  ) 
 Here is how much of TeX's memory you used:
- 22432 strings out of 493054
- 430653 string characters out of 6140585
+ 22449 strings out of 493054
+ 430996 string characters out of 6140585
  504019 words of memory out of 5000000
- 25377 multiletter control sequences out of 15000+600000
+ 25390 multiletter control sequences out of 15000+600000
  11300 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,16n,59p,940b,562s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1175,10 +1179,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mssi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on presentation.pdf (16 pages, 89687 bytes).
+Output written on presentation.pdf (18 pages, 94019 bytes).
 PDF statistics:
- 538 PDF objects out of 1000 (max. 8388607)
- 502 compressed objects within 6 object streams
- 36 named destinations out of 1000 (max. 500000)
+ 599 PDF objects out of 1000 (max. 8388607)
+ 561 compressed objects within 6 object streams
+ 40 named destinations out of 1000 (max. 500000)
  67 words of extra memory for PDF output out of 10000 (max. 10000000)
 

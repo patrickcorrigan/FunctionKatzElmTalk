@@ -1,4 +1,4 @@
-import Html exposing (Html, Attribute, div, input, text)
+import Html exposing (Html, Attribute, div, input, text, p)
 import Html.App as Html
 import Html.Attributes exposing (..)
 import Html.Events exposing (onInput)
@@ -11,7 +11,7 @@ main =
 -- MODEL
 
 type alias Model =
-  { content : String}
+  {content : String}
 
 model : Model
 model =
@@ -36,5 +36,5 @@ view : Model -> Html Msg
 view model =
   div []
     [ input [ placeholder "Text to reverse", onInput Change ] []
-    , div [] [ text (String.reverse model.content) ]
+    , p [] [ text (String.reverse model.content) ]
     ]
