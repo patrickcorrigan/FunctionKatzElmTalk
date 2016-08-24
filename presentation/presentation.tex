@@ -1,0 +1,276 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass[aspectratio=1610]{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+% \usetheme{default}
+% \usetheme{AnnArbor}
+% \usetheme{Antibes}
+% \usetheme{Bergen}
+\usetheme[hideothersubsections]{Berkeley}
+% \usetheme{Berlin}
+% \usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+\setbeamertemplate{subsection in sidebar shaded} {\vspace*{-\baselineskip}}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{etoolbox} % Allows including images
+\usepackage{stmaryrd} % Allows including images
+\usepackage{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{listings}
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\makeatletter
+\patchcmd{\beamer@sectionintoc}
+    {\vfill}
+    {\vskip\itemsep}
+    {}
+    {}
+\makeatother
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[An Introduction to Elm]{An Introduction to Elm} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Patrick Corrigan} % Your name
+\institute[Musica] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+Musica \\ % Your institution for the title page
+\medskip
+\textit{patrickcorrigan7@gmail.com} % Your email address
+}
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+\frametitle{Overview} % Table of contents slide, comment this block out to remove it
+\tableofcontents[hideallsubsections] % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\section{What is Elm?} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{What is Elm?}
+    \begin{itemize}
+      \item Functional programming language
+      \item Competes with projects like React as a tool for creating web apps.
+      \item Compiles to JS, HTML and CSS
+      \item Statically typed
+      \item Type inference
+      \item Pure
+      \item All values are immutable.
+    \end{itemize}
+\end{frame}
+\section{Why Elm?} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+\begin{frame}
+\frametitle{Why Elm?}
+    \begin{itemize}
+      \item No runtime exceptions!
+      \item Friendly error messages.
+      \item Enforced Semantic versioning for all community libraries.
+      \item Haskell like syntax
+      \item Fast!
+      \item Javascript interoperability
+    \end{itemize}
+\end{frame} 
+\section{What are we going to do?} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+\begin{frame}
+\frametitle{What are we going to do?}
+    \begin{itemize}
+      \item Learn about the Elm architecture.
+      \item User input examples
+      \item Interacting with the outside world.
+    \end{itemize}
+\end{frame} 
+
+\begin{frame}[c]
+\frametitle{First things first}
+
+\begin{center}
+     \Huge npm install -g elm
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Elm architecture}
+     Every elm program has the same architecture.
+    \begin{itemize}
+      \item Model
+      \item Update
+      \item View
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Button Example}
+
+\begin{center}
+     \Huge Build a simple counter.
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Now it's your turn}
+
+Your terrible boss has asked you to add a reset button.
+He says it's going to make the company millions.
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Text input example}
+
+\begin{center}
+     \Huge Text reverser
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Now it's your turn 2}
+Your underpaying boss has asked you to convert it a palindrome checker.
+\end{frame}
+\begin{frame}
+
+\frametitle{Text input example}
+
+\begin{center}
+     \Huge Text reverser
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Friend List Example}
+
+\begin{center}
+     \Huge Friend List Example
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Now it's your turn 3}
+    Feature request for you friend list.
+    When clicking on a person it should reveal their disposition.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{GET request example}
+
+\begin{center}
+     \Huge Simple Pokedex
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{I lied}
+
+\begin{center}
+     \Huge I lied.
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}
+
+    \begin{center}
+         \Huge Thank you
+    \end{center}
+\end{frame}
+
+
+
+%------------------------------------------------
+
+\end{document}
